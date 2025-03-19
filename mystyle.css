@@ -1,0 +1,73 @@
+  *,
+  *:before,
+  *:after { box-sizing: border-box; }
+
+  /* Button styling & toggle */
+  
+  .dropdown > input[type="checkbox"] {
+    position: absolute;
+    left: -100vw;
+  }
+
+  .dropdown > input[type="checkbox"]:checked ~ ul,
+  .dropdown > ul:target { left: 0; }
+  
+  .dropdown > [type="checkbox"]:checked + label:after,
+  .dropdown > ul:target ~ a:after { content: "\f0d8"; }
+
+  .dropdown > label:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: 6px;
+  }
+
+  /* container styling */
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* content styling */
+
+  .dropdown > label {
+    display: inline-block;
+    padding: 6px 15px;
+    color: #333;
+    line-height: 1.5em;
+    text-decoration: none;
+    border: 1px solid #8c8c8c;
+    cursor: pointer;
+  }
+    
+  .dropdown > ul {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    left: -100vw;
+    top: calc(1.5em + 14px);
+    border: 1px solid #8c8c8c;
+    background: #fff;
+    padding: 6px 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+  
+  .dropdown > ul a {
+    display: block;
+    padding: 6px 15px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .dropdown > ul a:hover,
+  .dropdown > ul a:focus {
+    background: #ececec;
+  }
+  
+
+  
+  
+  
